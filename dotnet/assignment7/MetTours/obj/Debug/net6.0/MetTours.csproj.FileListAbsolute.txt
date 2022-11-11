@@ -1,0 +1,12 @@
+D:\assignmnet 99\dotnet\assignment7\MetTours\bin\Debug\net6.0\MetTours.deps.json
+D:\assignmnet 99\dotnet\assignment7\MetTours\bin\Debug\net6.0\MetTours.dll
+D:\assignmnet 99\dotnet\assignment7\MetTours\bin\Debug\net6.0\MetTours.pdb
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\MetTours.csproj.AssemblyReference.cache
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\MetTours.GeneratedMSBuildEditorConfig.editorconfig
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\MetTours.AssemblyInfoInputs.cache
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\MetTours.AssemblyInfo.cs
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\MetTours.csproj.CoreCompileInputs.cache
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\MetTours.dll
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\refint\MetTours.dll
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\MetTours.pdb
+D:\assignmnet 99\dotnet\assignment7\MetTours\obj\Debug\net6.0\ref\MetTours.dll
