@@ -1,0 +1,121 @@
+Show databases;
+use tembhurni;
+show tables;
+	create table SEMP (
+			EMPNO char(4),
+            EMPNAME char(20),
+            BASIC float,
+            DEPTNO char(2),
+            DEPTHEAD char(4));
+            
+insert into semp values(0001,'SUNIL',6000,10,null);
+insert into semp values
+(0002,'HIREN',8000,20,null),
+(0003,'ALI',4000,10,0001),
+(0004,'GEORGE',6000,null,0002);
+
+create table SDEPT (
+            DEPTNO char(2),
+            DEPTNAME char(15));
+            
+insert into SDEPT values
+(10,'Development'),
+(20,'Training');
+
+
+show tables;
+select * from sdept;
+select * from semp;
+
+create table supplier(
+Sno varchar(5),
+Sname varchar(10),
+Status varchar (5),
+City varchar (10));
+
+create table parts(
+Pno varchar(5),
+Pname varchar(10),
+Color varchar (5),
+Weight int(5),
+City varchar (10));
+
+create table projects(
+Jno varchar(5),
+Jname varchar(10),
+City varchar (10));
+
+create table supplier_parts_project(
+Scode varchar(5),
+Pcode varchar(10),
+Jcode varchar (5),
+Qty int (10));		
+
+insert into supplier values('S1','Sarang','10','London');
+insert into supplier values
+('S2','Suraj', '20','Paris'),
+('S3','Sujit', '30','Athens');
+
+insert into supplier values
+('S2','Suraj', '20','Paris'),
+('S3','Sujit', '30','Athens');
+
+insert into parts
+values('P1', 'Shaft', 'Silver', 8 ,'London'),
+	  ('P2', 'Bearing', 'Grey', 12 ,'Paris'),
+      ('P3', 'Gear',' Black', 15,'Athens');
+      
+delete from supplier where Sno='S3';
+desc parts;
+
+insert into projects
+values('J1', 'BMW', 'London'),
+	  ('J2', 'AUDI', 'Paris'),
+      ('J3', 'HONDA','Athens');
+
+insert into supplier_parts_project
+values('S1', 'P1', 'J1', 10 ),
+	  ('S2', 'P2', 'J2', 20),
+      ('S3', 'P3',' J3', 30); 
+commit;
+
+Assignment 1========================================
+
+
+1.select * from Supplier;
+2.select Sno ,Sname from  supplier;
+3.select Pname , color from parts;
+4.select * from supplier where city='London';
+
+5.select * from supplier where City='Athens' or city='Paris';
+6.select * from parts where  weight>12 ;
+7.select * from parts where weight<14;
+8.select * from parts where weight between 12 and 14;
+9.select * from supplier where Status >0 or Status =20;
+10.select * from supplier where city!='London';
+11.select city from Supplier;
+12.select weight ,weight * 1000 from parts;
+13.select weight ,weight/1000 from parts;
+
+===============================================
+Assignment 2
+
+1.select city from supplier order by city  desc;
+
+2.select city from supplier order by city asc;
+
+3.select city ,Pname from parts order by city asc , Pname desc; 
+
+4.select * from supplier where Status between 10 and 20;
+
+5.select * from parts where Weight not between 10 and 15;
+
+6.select * from parts where Pname like 's%';
+
+7.select * from supplier where City like 'l%'; 
+
+8.select * from projects where Jname like '__N%';
+
+
+
+	

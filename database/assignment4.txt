@@ -1,0 +1,76 @@
+
+=============SALESPEOPLE TABLE================
+
+create table rno99_SALESPEOPLE(
+2 Snum number(4),
+3 Sname varchar2(10),
+4 City vachar2(10),
+6 Comm number(3,2));    //it create decimal (3digit and after decomal 2 digit)
+
+insert into rno99_SALESPEOPLE values(1001,'Peel','London',0.12);
+insert into rno99_SALESPEOPLE values(1002,'Serres','San Jose',0.13);
+insert into rno99_SALESPEOPLE values(1004,'Motika','London',0.11);
+insert into rno99_SALESPEOPLE values(1007,'Rifkin','Barcelona',0.15);
+insert into rno99_SALESPEOPLE values(1003,'Axelord','New York',0.10);
+select * from rno99_SALESPEOPLE;
+
+=============CUSTOMERS TABLE================
+
+create table rno99_CUSTOMERS(
+  2  Cnum number(4),
+  3  Cname varchar2(10),
+  4  City varchar2(10),
+  5  Rating number(4),
+  6  Snum number(4));
+
+insert into rno99_CUSTOMERS values(2001,'Hoffman','London',100,1001);
+insert into rno99_CUSTOMERS values(2002,'Giovanni','Rome',200,1003);
+insert into rno99_CUSTOMERS values(2003,'Liu','San Jose',200,1002);
+insert into rno99_CUSTOMERS values(2004,'Grass','Berlin',300,1002);
+insert into rno99_CUSTOMERS values(2006,'Clemens','London',100,1001);
+insert into rno99_CUSTOMERS values(2008,'Cisneros','San jose',300,1007);
+insert into rno99_CUSTOMERS values(2007,'Pereira','Rome',100,1004);
+select * from rno99_CUSTOMERS;
+
+alter table rno99_CUSTOMERS rename column CNUM to Cnum;
+
+=============ORDERS TABLE================
+
+
+
+create table rno99_ORDERS( ONUM number(4),AMT number(4),ODATE date,CNUM number(4),SNUM number(4));
+
+insert into rno99_ORDERS values(3001,18.69,'03-OCT-1990',2008,1007);
+insert into rno99_ORDERS values(3003 ,767.19 ,'03-OCT-1990' ,2001, 1001);
+insert into rno99_ORDERS values(3002 ,1900.10 ,'03-OCT-1990' ,2007, 1004);
+insert into rno99_ORDERS values(3005 ,5160.45 ,'03-OCT-1990' ,2003, 1002);
+insert into rno99_ORDERS values(3006 ,1098.16 ,'03-OCT-1990' ,2008, 1007);
+insert into rno99_ORDERS values(3009 ,1713.23 ,'04-OCT-1990' ,2002, 1003);
+insert into rno99_ORDERS values(3007 ,75.75 ,'04-OCT-1990' ,2004, 1002);
+insert into rno99_ORDERS values(3008 ,4723.00 ,'05-OCT-1990' ,2006, 1001);
+insert into rno99_ORDERS values(3010 ,1309.95 ,'06-OCT-1990' ,2004, 1002);
+insert into rno99_ORDERS values(3011 ,9891.88 ,'06-OCT-1990' ,2006, 1001);
+
+select * from rno99_ORDERS;
+================ ORACLE ASSIGNMENT 2 =====================
+
+Sameer Dehadrai Page: 1
+Assignment –2
+
+
+ALTER TABLE rno100_EMP
+  ADD COMM number(4 , 3);  
+UPDATE rno100_EMP SET COMM = 0 WHERE EMPNO = 101;
+
+Introducing Relational Databases.
+1) Which field of the Customers table is the primary key?
+=> Cnum
+
+2) What is the 4th column of the Customers table?
+=>Rating
+
+3) What is another word for row? For column?
+=>Tapals and Attributes
+
+4) Why isn’t it possible to see the first five rows of a table?
+=> Beacuse rows are not saved in sequential manner
