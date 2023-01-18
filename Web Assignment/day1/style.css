@@ -1,0 +1,93 @@
+
+.one p {
+    width: 1000px;
+   margin-left: auto;
+   margin-right: auto;
+    border: 1px solid;
+        
+}
+
+.two p:hover{
+    
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed;
+    color: rgba(112, 109, 109, 0.815);
+}
+
+.three{
+    background-color: rgb(238, 130, 130);
+    color: rgb(232, 236, 227);
+}
+
+.four{
+    background-color: rgb(130, 238, 144);
+    font-family: Arial;
+    font-size: 40px;
+}
+.five u{
+    font-size: 40px;
+    text-decoration: none;
+}
+
+.six{
+    /* text-align: center; */
+    /* text-align: left; */
+    /* text-align: right; */
+    text-align: justify;
+}
+.seven{
+    text-indent: 100px;
+}
+.eight{
+
+    text-decoration: overline;
+    text-decoration: underline;
+    text-decoration: none;
+    text-decoration: line-through;
+}
+.nine a{
+    text-decoration: none;
+    color: red;
+}
+.ten img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.ten :hover {
+    border-radius: 50%;
+}
+.eleven{
+    line-height: double;
+    word-spacing: 20px;
+    letter-spacing: 5px;
+}
+.twleve{
+    font-family: "Sofia", sans-serif;
+}
+.sixteen  ol{
+    width: 25%;
+    display: flex;
+
+}
+
+
+.seventeen p{
+    background-color: rgb(23,145,200)
+}
+.seventeen p1{
+    background-color: rgb(23,145,100);
+}
+
+.eighteen p{
+    background-color: rgba(112, 109, 109, 0.815)
+}
+.eighteen p1{
+    background-color: rgba(185, 121, 37, 0.915)
+}
+
+.nineteen h2{
+    text-align: center;
+    margin-right: 300px;
+}

@@ -1,0 +1,36 @@
+
+ .container{
+    
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+} 
+.col-6{
+    background-image: url("xyz.jpg");
+}
+.a {
+    border: solid black;
+    
+    margin-top: 10%;
+    padding-top: 4%;
+    padding-left: 10%;
+}
+
+.b {
+    text-align: center;
+    margin-right: 20%;
+}
+.c{
+        border: solid black;
+        margin-left: 15%;
+}  
+    
+
+.n{
+    background-color: aqua;
+    font-family: cursive;
+        margin-left: -9%;
+        margin-right: 19%;
+    border: solid black;
+   padding-left: 2%;
+}

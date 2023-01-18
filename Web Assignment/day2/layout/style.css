@@ -1,0 +1,32 @@
+.container {
+    
+    width: auto;
+}
+
+.logo{
+    padding-top: 10px;
+    margin-right: auto;
+    width: 130px;
+}
+.col-4{
+    width: 33.33%;
+    
+}
+.col-4 .img-fluid{
+    max-width: 80%;
+    height: auto;
+}
+.container .col-3 .img-fluid{
+    margin: auto;
+
+}
+
+.aa:hover{
+    border: 1px solid;
+    border-radius: 20%;
+}
+
+.b:hover{
+    font-size: 5px;
+    
+}
