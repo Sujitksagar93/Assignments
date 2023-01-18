@@ -1,0 +1,345 @@
+
+import java.util.*;
+
+
+
+public class SortedMerge 
+{
+  Node root;
+  
+ void createLinkedList()
+ {
+     root=null;
+ }
+         
+ void insertLeft(int data)
+ {
+     Node n=new Node(data);
+     if(root==null)
+     {
+         root=n;
+     }
+     else
+     {
+         n.next=root;
+         root=n;
+     }
+   }
+ void deleteLeft()
+ {    
+     if(root==null)
+     {
+         System.out.println("List Empty");
+     }
+     else
+     {
+         Node t=root;
+         root=root.next;
+         System.out.println("Deleted:"+t.data);
+     }
+     }
+ void insertRight(int data)
+ {
+     Node n=new Node(data);
+     if(root==null)
+     {
+         root=n;
+     }
+     else
+     {
+         Node t=root;
+         while(t.next!=null)
+         {
+             t=t.next;
+         }
+          t.next=n;
+     }
+   }
+ void deleteRight()
+ {
+     if(root==null)
+     {
+         System.out.println("List Empty");
+     }
+     else
+     {
+         Node t,t2;
+         t=t2=root;
+         while(t.next!=null)
+         {
+             t2=t;
+             t=t.next;
+         }
+         t2.next=null;
+         System.out.println("Deleted:"+t.data);
+     }
+   }
+ void printList()
+ {
+      if(root==null)
+     {
+         System.out.println("List Empty");
+     }
+     else
+     {
+         Node t;
+         t=root;
+         while(t!=null)
+         {
+             System.out.println(t.data);
+             t=t.next;
+         }
+         
+     }
+   }
+ void countNodes()
+ {
+     if(root==null)
+     {
+         System.out.println("List Empty");
+     }
+     else
+     {
+         Node t;
+         int c=0;
+         t=root;
+         while(t!=null)
+         {
+             
+             t=t.next;
+             c++;
+         }
+          System.out.println("Total nodes in list are:"+c);
+     }
+ }
+  
+ void searchList(int key)
+ {
+     if(root==null)
+     {
+         System.out.println("List Empty");
+     }
+     else
+     {
+         Node t;
+         int c=0;
+         t=root;
+         while(t!=null && t.data!=key)
+         {
+             t=t.next;
+             c++;
+         }
+         if(t!=null)
+            System.out.println("Found at "+c+" from root");
+         else
+             System.out.println("Not Found");
+     }
+                
+}
+  void deleteKeybased(int key)
+ {
+     if(root==null)
+     {
+         System.out.println("List Empty");
+     }
+     else
+     {
+         Node t,t2;
+         t=t2=root;
+         while(t!=null && t.data!=key)
+         {
+             t2=t;
+             t=t.next;
+         }
+         if(t==null)
+            System.out.println("Not found");
+         else
+         {
+             if(t==root)
+             { root=root.next;
+             }
+           
+             else if(t.next==null) 
+             {  t2.next=null;
+             }
+             else
+             {  t2.next=t.next;
+             }
+             
+             System.out.println("Deleted:"+t.data);
+         }
+     }
+ }
+
+void insertAfter(int key,int data)
+ {
+     if(root==null)
+     {
+         System.out.println("List Empty");
+     }
+     else
+     {
+         Node t;
+         t=root;
+         while(t!=null && t.data!=key)
+         {
+             t=t.next;
+         }
+         if(t==null)
+            System.out.println("Element Not found");
+         else
+         {
+              Node n=new Node(data);
+             n.next=t.next;
+             t.next=n;
+          }
+     }
+   }
+ 	
+ void sort()
+ { Node t,t2;
+ 	t=t2= root;
+	while(t.next!=null)
+	{ t2= t;
+	  t = t.next;
+		if(t.data<t2.data)
+		{
+			var temp = t.data;
+				t.data = t2.data;
+				t2.data = temp;
+				 sort();
+		}
+	}
+ 
+ }
+ void sortMerge(SortedMerge obj1)
+ {
+	 Node t = this.root;
+	 while(t.next!=null)
+	 {
+		 t=t.next;
+	 }
+	 
+	 t.next=obj1.root;
+	  
+	 this.sort();
+ }
+	 
+ 
+ 
+
+   public static void main(String args[])
+  {
+      int ch,e,d;
+      SortedMerge obj=new SortedMerge();
+      SortedMerge obj1=new SortedMerge();
+      obj1.insertRight(5);
+      obj1.insertRight(10);
+      obj1.insertRight(3);
+      obj1.insertRight(7);
+      obj1.insertRight(4);
+      obj1.insertRight(9);
+      obj1.insertRight(20);
+      obj1.insertRight(35);
+      obj1.insertRight(6);
+      obj1.sort();
+      
+
+      Scanner in=new Scanner(System.in);
+      obj.createLinkedList();
+      do
+      {
+           System.out.println("1.Insert_Left\n2.Delete_Left\n3.Insert_Right\n4.Delete_Right\n5.Print_List\n6.Count_Nodes\n7.Search_List\n8.Delete_Key\n9.Insert_After\n10.Sort\n11.Merge\n0.Exit");
+           ch=in.nextInt();
+           switch(ch)
+           {
+                case 1:
+                           System.out.println("Enter Data To Be Added At Left End:");
+                           e=in.nextInt();
+                           obj.insertLeft(e);
+                           System.out.println("Added Left");
+                           break;
+                   
+                case 2:
+                           obj.deleteLeft();
+                           break;
+                   
+                case 3:
+                           System.out.println("Enter Data To Be Added At Right End:");
+                           e=in.nextInt();
+                           obj.insertRight(e);
+                           System.out.println("Added Right");
+                           break; 
+                
+                case 4:
+                           obj.deleteRight();
+                           break;
+                
+                case 5:
+                           obj.printList();
+                           break;
+
+                case 6:
+                           obj.countNodes();
+                           break; 
+
+                case 7:
+                           System.out.println("Enter Data To Be Searched:");
+                           e=in.nextInt();
+                           obj.searchList(e);
+                           break;    
+
+                case 8:
+                           System.out.println("Enter Data To Be Deleted:");
+                           e=in.nextInt();
+                           obj.deleteKeybased(e);
+                           break;
+
+                case 9:
+                           System.out.println("Enter the Key:");
+                           e=in.nextInt();
+                           System.out.println("Enter the Data to be inserted:");
+                           d=in.nextInt();
+                           obj.insertAfter(e,d);
+                           System.out.println("Data Inserted:"+d);
+                           break;
+                case 10:
+                			System.out.println("Sorted List:");
+                			obj.sort();
+                			obj.printList();
+                			break;
+                case 11:
+        					System.out.println("Sorted Merged List:");
+        					obj.sortMerge(obj1);
+                            obj.printList();
+                            break;
+                			
+                             
+                case 0:
+                        System.out.println("Exiting ");
+                        break;
+                 
+                default:
+                        System.out.println("Wrong option selected");
+                        break;
+           }
+      }while(ch!=0);
+      
+      in.close();
+      }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
